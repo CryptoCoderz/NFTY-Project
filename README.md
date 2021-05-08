@@ -117,7 +117,7 @@ rpcport=19657
 port=20047
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
-addnode=192.168.1.128:20047
+addnode=46.101.103.207:20047
 CONFIG
 chmod 700 ~/.NFTY/NFTY.conf; chmod 700 ~/.NFTY; ls -la ~/.NFTY
 ```
