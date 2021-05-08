@@ -3055,7 +3055,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     // define address
     CBitcoinAddress devopaddress;
     if (Params().NetworkID() == CChainParams::MAIN) {
-        devopaddress = CBitcoinAddress("AVToVFfs7zzWWkrR9rpueJ5Nd24G33EnWY");
+        devopaddress = CBitcoinAddress("NP1dCbQQTCeAomXcU8RyzamMySVw9dfBWY");
     } else if (Params().NetworkID() == CChainParams::TESTNET) {
         devopaddress = CBitcoinAddress("");
     } else if (Params().NetworkID() == CChainParams::REGTEST) {

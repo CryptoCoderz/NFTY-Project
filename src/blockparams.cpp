@@ -282,7 +282,7 @@ void VRX_ThreadCurve(const CBlockIndex* pindexLast, bool fProofOfStake)
 
     // Version 1.1 curve-patch
     //
-    if(1 == 1)
+    if(pindexLast->nHeight > 10000)
     {
         // Define time values
         blkTime = pindexLast->GetBlockTime();
@@ -307,6 +307,11 @@ void VRX_ThreadCurve(const CBlockIndex* pindexLast, bool fProofOfStake)
             difTime = blkTime - cntTime;
             // Run Curve
             while(difTime > (minuteRounds * 60)) {
+                // Break loop if we already have a low diff
+                if(bnNew.GetCompact() < 1) {
+                    //
+                    break;
+                }
                 // Break loop after 5 hours, otherwise time threshold will auto-break loop
                 if (minuteRounds > (5 * minuteRounds)){
                     fCRVreset = true;
@@ -322,10 +327,10 @@ void VRX_ThreadCurve(const CBlockIndex* pindexLast, bool fProofOfStake)
                 minuteRounds ++;
             }
         } else {// Version 1.1 Standard Curve Run
-            if(difTime > (minuteRounds+0) * 60 * 60) { TerminalAverage /= difCurve; }
-            if(difTime > (minuteRounds+1) * 60 * 60) { TerminalAverage /= difCurve; }
-            if(difTime > (minuteRounds+2) * 60 * 60) { TerminalAverage /= difCurve; }
-            if(difTime > (minuteRounds+3) * 60 * 60) { TerminalAverage /= difCurve; }
+            if(difTime > (minuteRounds+0) * 60) { TerminalAverage /= difCurve; }
+            if(difTime > (minuteRounds+1) * 60) { TerminalAverage /= difCurve; }
+            if(difTime > (minuteRounds+2) * 60) { TerminalAverage /= difCurve; }
+            if(difTime > (minuteRounds+3) * 60) { TerminalAverage /= difCurve; }
         }
     }
     return;
