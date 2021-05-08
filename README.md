@@ -106,17 +106,18 @@ cd ~; cd ~/NFTY; qmake -qt=qt5 USE_UPNP=-; make
 
 ### Create config file for daemon
 ```
-cd ~; sudo ufw allow 20021/tcp; sudo ufw allow 19697/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.NFTY; cat << "CONFIG" >> ~/.NFTY/NFTY.conf
+cd ~; sudo ufw allow 20047/tcp; sudo ufw allow 19657/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.NFTY; cat << "CONFIG" >> ~/.NFTY/NFTY.conf
 listen=1
 server=1
 daemon=1
 testnet=0
 rpcuser=NFTYrpcuser
 rpcpassword=SomeCrazyVeryVerySecurePasswordHere
-rpcport=19697
-port=20021
+rpcport=19657
+port=20047
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
+addnode=192.168.1.128:20047
 CONFIG
 chmod 700 ~/.NFTY/NFTY.conf; chmod 700 ~/.NFTY; ls -la ~/.NFTY
 ```
