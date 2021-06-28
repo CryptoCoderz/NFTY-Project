@@ -1,21 +1,22 @@
 NFTY [NFTY] 2020
 ===========================================================================================
 
-http://rev.org/
+http://nfty-portal.io/
 
 What is the NFTY [NFTY] Blockchain?
 -----------------------------------------
-*TODO: Update documentation regarding implemented tech as this section is out of date and much progress and upgrades have been made to mentioned sections...*
+Built on the Fractal Engine: The multi-chain system that can generate side-chains for any depth of features allowing the system to scale data processing capabilities exponentially
+*TODO: Update documentation regarding implemented tech as there are constant improvements and ground breaking developments...*
 
 ### Overview
-NFTY is a blockchain project with the goal of creating a blockchain for the student, one where your degrees are stored on the blockchain and can be validated by employers by the pubkey that sent you the degree.
+NFTY is a blockchain project with the goal of furthering the advancement of cryptocurrencies and NFT trading and data storage on blockchain.
 
 ### Blockchain Technology
 The NFTY [NFTY] Blockchain is an experimental smart contract platform that enables 
 instant payments to anyone, anywhere in the world in a private, secure manner. 
 NFTY [NFTY] uses peer-to-peer blockchain technology developed by CryptoCoderz and SaltineChips to operate
 with no central authority: managing transactions, execution of contracts, and 
-issuing money are carried out collectively by the network.
+issuing cryptocurrencies and/or NFTs are carried out collectively by the network.
 
 ### Custom Difficulty Retarget Algorithm “VRX”
 VRX is designed from the ground up to integrate properly with the Velocity parameter enforcement system to ensure users no longer receive orphan blocks.
