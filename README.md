@@ -5,7 +5,9 @@ http://nfty-portal.io/
 
 What is the NFTY [NFTY] Blockchain?
 -----------------------------------------
-Built on the Fractal Engine: The multi-chain system that can generate side-chains for any depth of features allowing the system to scale data processing capabilities exponentially. **TODO: Update documentation regarding implemented tech as there are constant improvements and ground breaking developments...**
+Built on the Fractal Engine: A multi-chain system for cryptocurrencies and NFTs that can generate side-chains for any depth of features allowing the system to scale data processing capabilities exponentially.
+
+*TODO: Update documentation regarding implemented tech as there are constant improvements and ground breaking developments...*
 
 ### Overview
 NFTY is a blockchain project with the goal of furthering the advancement of cryptocurrencies and NFT trading and data storage on blockchain.
