@@ -541,7 +541,7 @@ void NFTYGUI::createToolBars()
 
 void NFTYGUI::setClientModel(ClientModel *clientModel)
 {
-    netLabel->setText("v1.0.0.0");// Version in GUI
+    netLabel->setText("v1.0.0.2");// Version in GUI
 
     this->clientModel = clientModel;
     if(clientModel)

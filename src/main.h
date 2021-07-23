@@ -84,7 +84,7 @@ static const int64_t nDrift = 5 * 60;
 /** Future drift params */
 inline int64_t FutureDrift(int64_t nTime) { return nTime + nDrift; }
 /** Velocity Factor handling toggle */
-inline bool FACTOR_TOGGLE(int nHeight) { return TestNet() || nHeight > 500; }
+inline bool FACTOR_TOGGLE(int nHeight) { return TestNet() || nHeight > 100; }
 /** "reject" message codes **/
 static const unsigned char REJECT_INVALID = 0x10;
 
