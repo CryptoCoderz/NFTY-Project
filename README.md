@@ -75,7 +75,7 @@ cd ~; wget http://download.oracle.com/berkeley-db/db-6.2.32.NC.tar.gz; tar zxf d
 
 ### GitHub pull (Source Download)
 ```
-cd ~; git clone https://github.com/CryptoCoderz/NFTY NFTY
+cd ~; git clone https://github.com/CryptoCoderz/NFTY-Project NFTY
 ```
 
 ### Build NFTY daemon
@@ -120,6 +120,7 @@ port=20047
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
 addnode=46.101.103.207:20047
+addnode=159.203.240.221:20047
 CONFIG
 chmod 700 ~/.NFTY/NFTY.conf; chmod 700 ~/.NFTY; ls -la ~/.NFTY
 ```
