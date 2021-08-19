@@ -102,8 +102,8 @@ block.GetHash = 0000e2d11e957f62868ac8a9f7f6d7331cc0fbab05f6dd47afb083c792b5692c
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         nPoolMaxTransactions = 9;
-        strMNenginePoolDummyAddress = "NPArwtQcsuLPkN6qmsRYNobiw8xPDBLguV";
-        strDevOpsAddress = "NP1dCbQQTCeAomXcU8RyzamMySVw9dfBWY";
+        strMNenginePoolDummyAddress = "Ninjsz14RhikPergojWR2GKe3RbSRzCdcZ";
+        strDevOpsAddress = "NLB3R9kEiqCex9e4o34PRDBFTKhjegY1FH";
         nEndPoWBlock = 10000;
         nStartPoSBlock = 1;
     }

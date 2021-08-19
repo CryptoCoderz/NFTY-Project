@@ -15,7 +15,7 @@ static const unsigned int nModifierInterval = 2 * 60;
 /** Genesis block subsidy */
 static const int64_t nGenesisBlockReward = 1 * COIN;
 /** Reserve block subsidy */
-static const int64_t nBlockRewardReserve = 140000 * COIN; // premine 14,000,000 NFTY
+static const int64_t nBlockRewardReserve = 2500 * COIN; // premine 250,000 NFTY (SPACE)
 /** Standard block subsidy */
 static const int64_t nBlockStandardReward = 5 * COIN;
 /** Block spacing preferred */

@@ -41,9 +41,9 @@ QString NFTYUnits::name(int unit)
 {
     switch(unit)
     {
-    case NFTY: return QString("NFTY");
-    case mNFTY: return QString("mNFTY");
-    case uNFTY: return QString::fromUtf8("μNFTY");
+    case NFTY: return QString("SPACE");
+    case mNFTY: return QString("mSPACE");
+    case uNFTY: return QString::fromUtf8("μSPACE");
     default: return QString("???");
     }
 }
@@ -52,9 +52,9 @@ QString NFTYUnits::description(int unit)
 {
     switch(unit)
     {
-    case NFTY: return QString("NFTYs");
-    case mNFTY: return QString("Milli-NFTYs (1 / 1,000)");
-    case uNFTY: return QString("Micro-NFTYs (1 / 1,000,000)");
+    case NFTY: return QString("SPACEs");
+    case mNFTY: return QString("Milli-SPACEs (1 / 1,000)");
+    case uNFTY: return QString("Micro-SPACEs (1 / 1,000,000)");
     default: return QString("???");
     }
 }
