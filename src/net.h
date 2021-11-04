@@ -129,7 +129,8 @@ enum {
     MSG_SPORK,
     MSG_MASTERNODE_WINNER,
     MSG_MASTERNODE_SCANNING_ERROR,
-    MSG_DSTX
+    MSG_DSTX,
+    MSG_DEMIBLOCK,
 };
 
 extern bool fDiscover;
@@ -588,8 +589,6 @@ public:
             mapAlreadyAskedFor.insert(std::make_pair(inv, nRequestTime));
         mapAskFor.insert(std::make_pair(nRequestTime, inv));
     }
-
-
 
     // TODO: Document the postcondition of this function.  Is cs_vSend locked?
     void BeginMessage(const char* pszCommand) EXCLUSIVE_LOCK_FUNCTION(cs_vSend)

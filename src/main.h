@@ -72,11 +72,13 @@ static const int MAX_BLOCKS_IN_TRANSIT_PER_PEER = 128;
 /** Timeout in seconds before considering a block download peer unresponsive. */
 static const unsigned int BLOCK_DOWNLOAD_TIMEOUT = 60;
 /** Maximum block reorganize depth (consider else an invalid fork) */
-static const unsigned int BLOCK_REORG_MAX_DEPTH = 150;
-/** Minimum block reorganize depth (consider else an invalid fork) */
-static const unsigned int BLOCK_REORG_MIN_DEPTH = 15;
+static const int BLOCK_REORG_MAX_DEPTH = 1;
+/** Maximum block reorganize depth override (enabled using demi-nodes) */
+static int BLOCK_REORG_OVERRIDE_DEPTH = 0;
+/** Combined Maximum block reorganize depth (consider else an invalid fork) */
+static int BLOCK_REORG_THRESHOLD = BLOCK_REORG_MAX_DEPTH + BLOCK_REORG_OVERRIDE_DEPTH;
 /** Depth for rolling checkpoing block */
-static const unsigned int BLOCK_TEMP_CHECKPOINT_DEPTH = 12;
+static const int BLOCK_TEMP_CHECKPOINT_DEPTH = 120;
 /** Defaults to yes, adaptively increase/decrease max/min/priority along with the re-calculated block size **/
 static const unsigned int DEFAULT_SCALE_BLOCK_SIZE_OPTIONS = 1;
 /** Future drift value */
@@ -104,6 +106,7 @@ extern uint64_t nLastBlockTx;
 extern uint64_t nLastBlockSize;
 extern int64_t nLastCoinStakeSearchInterval;
 extern const std::string strMessageMagic;
+extern std::string GetRelayPeerAddr;
 extern int64_t nTimeBestReceived;
 extern bool fImporting;
 extern bool fReindex;

@@ -11,9 +11,6 @@
 #include "main.h"
 #include "uint256.h"
 
-
-static const int nCheckpointSpan = 5000;
-
 namespace Checkpoints
 {
     typedef std::map<int, uint256> MapCheckpoints;
@@ -73,7 +70,8 @@ namespace Checkpoints
     {
         const CBlockIndex *pindex = pindexBest;
         // Search backward for a block within max span and maturity window
-        while (pindex->pprev && pindex->nHeight + nCheckpointSpan > pindexBest->nHeight)
+        // Taking into account our 120 block depth + reorganize depth
+        while (pindex->pprev && pindex->nHeight + (BLOCK_TEMP_CHECKPOINT_DEPTH + BLOCK_REORG_THRESHOLD) > pindexBest->nHeight)
             pindex = pindex->pprev;
         return pindex;
     }

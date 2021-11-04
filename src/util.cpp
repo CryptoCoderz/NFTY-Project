@@ -116,9 +116,10 @@ int64_t nMasterNodeChecksDelayBaseTime = 0;
 bool fMnAdvRelay = false;
 //MasterNode tier 2
 bool fMnT2 = false;
-//Logic for lock/unlock GUI icon
-//does not affect daemon operation
+//Logic for lock/unlock GUI icon, does not affect daemon operation
 bool settingsStatus = false;
+//Demi-node handling
+bool fDemiNodes = false;
 
 // Init OpenSSL library multithreading support
 static CCriticalSection** ppmutexOpenSSL;
@@ -1213,6 +1214,8 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                fprintf(ConfFile, "listen=1\n");
                fprintf(ConfFile, "server=1\n");
                fprintf(ConfFile, "maxconnections=150\n");
+               fprintf(ConfFile, "deminodes=1\n");
+               fprintf(ConfFile, "demimaxdepth=200\n");
                fprintf(ConfFile, "rpcuser=yourusername\n");
 
                char s[32];
