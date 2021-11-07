@@ -1203,8 +1203,6 @@ boost::filesystem::path GetMasternodeConfigFile()
 void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
-    int confLoop = 0;
-    injectConfig:
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
     {
@@ -1230,15 +1228,8 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                fprintf(ConfFile, "rpcport=19657\n");
                fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
                fprintf(ConfFile, "rpcallowip=127.0.0.1\n");
-               fprintf(ConfFile, "addnode=46.101.103.207:20047\n");
+               fprintf(ConfFile, "addnode=172.105.184.201:20047\n");
                fclose(ConfFile);
-    }
-
-    // Wallet will reload config file so it is properly read...
-    if (confLoop < 1)
-    {
-        ++confLoop;
-        goto injectConfig;
     }
 
     set<string> setOptions;
